@@ -41,7 +41,7 @@ continueBtn.addEventListener('click', () => {
 
 // فتح واتساب
 whatsappBtn.addEventListener('click', () => {
-  const whatsappLink = 'https://wa.me/96655714405'; // ← غيّر هنا
+  const whatsappLink = 'https://wa.me/966557144054'; // ← غيّر هنا
   window.open(whatsappLink, '_blank');
 });
 
