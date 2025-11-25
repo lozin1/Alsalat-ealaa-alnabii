@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>هل صليت على النبي اليوم؟</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- العنوان الرئيسي -->
+  <h1 class="main-title">هل صليت على النبي اليوم؟</h1>
+  <p class="subtitle">إذا صليت على النبي ﷺ 10 مرات، ستظهر لك مفاجأة</p>
+
+  <!-- جهاز السبحة -->
+  <div class="counter-device">
+    <div class="display" id="count">0</div>
+    <div class="buttons">
+      <button class="btn-reset" id="resetBtn">إعادة</button>
+      <button class="btn-count" id="countBtn">صلّ</button>
+    </div>
+    <div class="big-button" id="bigBtn"></div>
+  </div>
+
+  <!-- مربع المفاجأة -->
+  <div class="surprise-modal" id="surpriseModal">
+    <div class="modal-content">
+      <h2>🎉 مبروك!</h2>
+      <p>كسبت أجر الصلاة على النبي ﷺ عشر مرات.</p>
+      <div class="contact-section">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOAAAADhCAMAAADmr0l2AAAAflBMVEX///8l02YA0FgA0FYA0Vsh02Qc0mIX0mAP0V4I0Vzh+Oi978zk+Or5/vu17cbx/PXr+vBK2HvK8tZx35RC13bC8NCi6bh84ZxW2oKo6rxm3Y207cX2/fmt68DV9d+M5KeV5q5c24Yz1W5u3pLO89mR5at64Juc57OE4qEw1WxANz69AAAQcklEQVR4nNVd53qrOBANQkKSOzYucbcTt/d/wQWXG9s6KoAA7/mx3242AUYaTZ/R11fl6LeGvclh+rOLk8slCILLPol3P9PDpDds9at/fZVojU+jhIdUCs4jliK4If23KOJcSBqKZHRqt5r+0ALotDexIDKlKzCDRVwSGW96naY/2R2DxShKabOR9kJmRuVo9X8gcri5hMK6b3gvBQnO427TFJgwHkmaa+fUnaR03vtQGocjIqMSxD0QyXA+bpoYBZ1DRLkH6u40UnH+KNE6noWiDGeqYJwki6bJumM5iahf6u40Srn9AENgsKGeN++JRB4eG9Ycg2Po7+Qh8PCnwcPYr5q8DFH409AudjekevJuJE6bOIvfsh7yMnB6qpu84UVWJVogBKtV9/fnYa3kpWBkN6iNvu9iRgv7Q5E/j8ikHvIGMc1HVyQEpSRVl5ckjmdx6tinNjWhVOT1OmRSh8r4Ju5flTmzNBkdVsP14NVF6A5aw8VhlMjMKXZfq7ByYbOcOW4f44LQ3XZs02GD8Wku3d1jGlerMYZuDhEThB0X7vzU6R0D4mbxRaRdIX1nF+HJZDib5D8sne+dmz8ZTiug7IplLO3UiXC3KMpFy97cxe0SSTVsuhbW9U2duO9yL1+uYmI9j0z+eqLpGSsbezJBp2sPL2qdhc1KYuG3hxe94kws76TBxFuwaHWxudDE90HcmY8fI4lf4TaOLepW7ny+bpkYbTNGE/+m8K+FRJ4svb2rfzGJFyYv1aimYWJk1CjwJUwHRpOR85Wn96joMWFaWe7H1e+YVBMLN5XGobfEwDxM+jC+OyaZTeOq4yWDmeEo+qDQRF9E64jN9oRewpWn0MSfdFdPLGg51+tgJsqxUF8vX1hYnXB5R0/Ppiwqs8rdQPtgkdQXIklPYqIVpywooQ8TrQirzmfR4BzqPiVKCj90pzvdLKzS68Roa419XtRqm+rszyhoIl/QCXTrLYux07dOdonYnxWYB91YdxBJEe9prWN6+uP9010x0kW8wvwecF+n4Mmmgi93xUbDVUzmVhaJhr6wpvCyBhMNX7G8onSqYfcatTvGSkOhyCdo2prHhL2KvtsdPd2n5dFcfY2n+QH06SmkOUyrGFswjfPnDRoujWLnJ5ywNK4rfWXFBMtS6ZqZ6eAVok3qh1ds8A6EjgYW1hBiVO1H58IICnlHXXGCJih35/A6EEO71IlJB5DBWfBZNY4aT5U4SNIdlKDhpxXjduA+RHbPaQz/MPy8As4xFIX29CjcenGu45Nz4owEDWOWvzrBvyoeFKgSUNqLrfFv+pBBXY5uAxhAbUiMjtMUSV/yCRYoQg9tBz8a/gLaMHxe2xfnxRzth0ng/wAVwYQ9AjM8BmEGInhc53YvUdgh0m9IC22gnUHXyV/dAGNhnRK3jZhUb5LOwQZGM9tLvt8ClrXGTJFZEumiYvAEhjYJqkRJrKrIJ6BhqdvCIziyFrXy9bVQV0XW2fCwBYpbI0jRYlh3Ywh2vV67ABWfhlAXHsBaUIuEgWIpID7qgVzRA+peHNBvglSnbS80TktUq2+MLDYJfm8B/FwyND8bKtoUYZ3JiyE4WkgMgIVgFi8eaqEMotbwVOzEemvwscSc0uhq89ssqIoYhF/06YoYAGa2bQORVLqDWnjbL8AWciWSD06g5SuXhvpDh9CBRwyBIH0XM22VQLY3P3ZrKtCzGkBesVe3UL4ZjMCmk5ZAvbH4GGuiqrBSt+fNp+irCpshXfKEsbG/gIkK6VEBFvtVVQElyC2R+pG5gvudRarFRj0ur6pwB1bAEgm1lMfbRLBfAJPxhUeXgEMtH4j05usC1VpqAjQFfYrFAxlq83m+TaWqGVRNVCVW6ufQp2D1SGVhYslFIOdRv4KVA/Dg8wqrrRhat/8BwBNvEP57GwxQwy1PvmxLPU9WIWhv/WOXakl6RU89ZeSfFJioDGzj0K62+O/pGVU04OgADMc/FlLNGENs8QacRcz5EK+Yqcfs3/vV3RW2egqcnntDrUlFINYfthhQaVZb2YlAmzHkFeCLHodQ1SE2R8KRwKbDa/IeMlNVGreG313OYM1yVE/GRSXdbik7SNGapYyqKO4cBCS+Q8bTpdnfFpTzC3BqblJmrTh2LjEjVSorqDvzrdpjNymzUGSMS+D2bJ/2ENa6gchaux011Vl0CWsC0+gNhav9i+KkSplt9nPV2aUONpZVTzBWd23UWFnzm8ug5hdwcuYNNilTr8ObQV3zqxToqsEj7vI4WJDxRF8DtVHAbf+CdFuz1hnMUbX6ZxR9ofRKxou/yoc6BhtMBDZTXKoWidAWEofcLTdk4NHaBegNarJEDpG36xjS1MfVcpSHe4XqNYgFUoPUMQOta45hvJnmra8hZEY1Qk0c/VSdrq/VDXyGanTyA9LzzgloTeDJ8Qz7h+rDRUcU/3POm4Bg1fWpTVXvLVW34Qfk1nLknzX5icYKvFWPcAcsNXu84h++8Sl0sxQqgCIvswyL+sMcbpymDb3SyVl5PiejReXbHOuvKSRhopkuCzWVffn6KmiK3jHDaVDeTB+QqpkvIHrE8thZmkauhhotgOkBCMxXArLVyBnZBJOClFfZHYQlHPmXyRPgDpY7g7qKytSibcCegWdQVY45fYGJxjEM66wavUHlpn1JPXgF7lcLWFT7MYR6sIwlcwPsXgiacAuhJaPaormr5nGnW2q1m7psqgC0RVXRaqnhAtDNTSD1hp7U1rIsRl/CH/yDRlfU2yQCAoTRFKXVSP6QrTZdWGt+Anj0WxiTKVAdoRt+UWuLgRq7598wqlakgQw2nAbZYM76KFTrELIAIYiLFhINmvkXASswracgADMOIeMWku5Lbe2Tu2dR0jJQE4RZgFCVDwVLPXVGqfMUoROnl3MZhlZleaYQujgnUwBaQeM2kXdDWHbLS/FZul11q6Ls52qRRdGu6602HyNmVu77vS8Po0HBMkW1pvDGiyrnFm7rwENCMkTMwntPbTRM8lOR0wjE5VWaHNTUdmELa6bNODHLQXwJ7jBBD/nNKV2xgUp4idC0ftxjQGeGzPjm/SM4OecdlaZWttxYsaUGDp1y2BCGgZ1BpLcgkHziZJpPFoBqvNsDQKVT8di7YeRqatXM8CdrNEy+i7NAQdN9o9RIRiFj7Y6BqaEiIqjlZ6mt2ODhyJlE1VB7RJfUXHQxW+aOjnH8t4jUfgXDwc3uBnMkUdUGjwYqta+nXINjy3jZAKPvg9V/zAUpkeP1Z6oSlncbERTdF3AJnSlMSdw/76LePHgi0S5u1CP4V9CklumV7HkwDh/PSJTR6aHndJP8XsDtTpc6MeCvHletLymb4RvYCr2YCKfXs6ULWL3/vjWWqVraf/U+oPHHqVzNgP7FWm7Jw91kZZgR/gpieSEqh/131lHnS9l5FF3zFRVXMG6/RuYfgRbrFNQLPG2San7kzMAgzPPdIGYj0PI2VZk/czUo3y3Loyk2bsfLDdT8LpCnfB6kAioHffSOWS/6cYe1JRy0Xz0LXvUQeqkoX+e4uM0MW7ufKrVv3vwDYNhROV1/x1I/hD8fbtXXWoBRAa/NLaDH1VOLqtN1aXZIc2QObNBr+FqN19gFsyPGXm4AN8u8gX0MAJio5mtmSt/1ykIDLBIBtNG/t18BOepvZsqkNJtaZmehWT/vxiu4Mo56y33lvTbU/rkvAFaM2vgGdtln79Gq1G31Fi0IoiTq+UJhEeqxXGk5KsGn5uFgYBYJGsLpNhmpBNZJjvtfX2CpZgCuGbIL2uCY+DuFV4yt1wpCMGHUEahoFXa4A0723qPaC/KTyCxdUGgeHDyzaLyv9D6uoZeYrmtD9FEzfWrmQefNqiXd1VS2/jpd1foAD8zxJmDEaCPzqKmzkgHUg4Nw5VQyt6wwmokqNMkjtBhVtQG2dy7byK3X46HpmIG2VhXNiKms03hwulhu3GXhjzWsgHI9etcKbiGt7pqQ9SHS0xiFsT1fv0HupsENgh1ztMpbBtebANHIeLhzKEeAWSmTYQ4HpVc9Z3u9jQkVPMoMEsZYxIUMk5NTahCVyJknugGTO5UzfggxoLtebebxhXN+iefnydgx8Qmrq8yquwuSCo2Ul7sASlCb8QWi+PUOn3LHEuoZYvGAQBLKS3itAsCmG2vWCCShap326g6lLuMKa2efGuKvd8KdM3DdmLB114IxnPWOmXQFrsuwcxsIAHvIwviHpljFXkCtmjKfed8LrstwaOpTbVfrNP8mgEviGLc6ryDVW6RCvWr84IyOQ4U/mC5nSTw2gSNuWXS5JLPAkMP6McVRcqeWq2oSvX6hoc+peV8dLVOm7rAaHDX0EZeyEHUey8fZaXPNgBC3Rjdgp33YrW4zXX+Nk7ZGdtpHXcvX32tSVJbg/gPITmto9A1ESxugcmwXVqOG9Y47t6Cnzb+53n+spqGK9xf4x1lbN0W3bk9Adlr9neIa9GNtwY10nZsBMt0Fm5j8Y6zPZbiPOFObeT/GTjvqy/py3A8MJnF/xuXev4G+Hoy7u6ug3Mtip60nsxrmVXSPhuqFHPSBoLYphtpazQURTO6rdhfb3FB/wpMc+VlQ1K2x0wa9IyP3YmQWzqu8n6cVmyoz8uwfSp0hO60/PgehfDYponBT1VCOvok7s67LPA8Dc/ze7bTu8JC8EndfSF3KuBy6B2KsjpL5ZLw64vDVTlufZpRqjEEmIu/SpruV5uIvkrO/Sg00/tlpre850RH3IFGefNrl/Y1591L2ysk1qH/paqd1FqOIOLQ3MEGmvrI061FoIY/lngIC7LToq9+eBkTaLz+5g4c+bhnuLhLb7gURz72Wav8r20OJYgSTZFrOPv89EktjVwoR5z4OqGbbZVy/Ck6CTVEaf8+RS1lpkbua0Q1+RcE45cd23pRNvzcSZkH2eHyhyZCw+KAMjTLcb1xrCb4G7fM+dDzrMilkOanjHrwQGfycxkaDvdsZn+aB+1lnYbF7DWGJkw8iIy6J3M/Pk/awNeg/TLpuf7Ae9ibn+SX9v9xZSqfSJSh4vNEdvP5wre2hlJDrlfXXfxBKpchD2vU5xW+CB20hnwe5L66Bcqq7JsAdp+5AWC9LbBwulZUGqHeJOCASOQqTy4HRpJx95HADzysiQcSot+K1kMhkULKSxXQlMngfp3L+fTN2J9XvYkpe6die+e6Pl7cJSmanZ3aZcLttXIY8Wp48pyuUgptlkhx+lfjLd4FeD0dEZO/B/9KOO38ljuzPY42TMo5t/mkRZFXNfiY/6kZlP5BKlODYM5q4rbP0zKlMio2v8gBQA/v3HkHoz8rhTd1euo2+aGQinHksAUS9I9fXpOJyN3FXQINTYmmEcKSOJBOvBYBoA1PiSLzNHZZvnZLQff4GQCTDeOK5ckUpYr55q8OCUcDB6ofSQkRG2XFY+C/efLHTWPqWyzR3vOEN68lOkDwBq0xKizzHIQ/+WltT4qLRwlMupbU4xzSl0kIm4yltND4vKqt8v9+SnR26hwHmD53xaTqTIcm8W86jiN0QRel/pT4wCcXsaAlqlMZQZgYYfTXAPGOwHq9Om+lovpvFcTzbzUfTw2k1XnfqmBV/DlMDbNjMDSa1YFtUXP5P8B/0x9yL0T8FUAAAAABJRU5ErkJggg==" alt="واتساب" class="whatsapp-icon">
+        <button class="contact-btn" id="whatsappBtn">لإنشاء مواقع — تواصل معي</button>
+      </div>
+      <button class="continue-btn" id="continueBtn">استمر في العد ✅</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

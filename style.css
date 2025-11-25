@@ -1,0 +1,232 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Amiri', 'Lateef', 'Segoe UI', serif;
+  background: url('https://www.transparenttextures.com/patterns/wood-pattern.png'), #6d4c41;
+  background-size: 320px;
+  min-height: 100vh;
+  padding: 20px;
+  color: #f9f5e9;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+.main-title {
+  font-size: 2.4rem;
+  margin: 30px 0 10px;
+  color: #f3e5ab;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.4);
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #d7ccc8;
+  margin-bottom: 30px;
+  max-width: 600px;
+  line-height: 1.5;
+}
+
+.counter-device {
+  width: 280px;
+  height: 380px;
+  background: linear-gradient(135deg, #1a3b6c, #2c5a90);
+  border-radius: 40px;
+  padding: 20px;
+  margin: 0 auto;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.7);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.display {
+  width: 220px;
+  height: 60px;
+  background: #fff;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3.2rem;
+  font-weight: bold;
+  color: #222;
+  margin-bottom: 20px;
+  box-shadow: inset 0 3px 6px rgba(0,0,0,0.2);
+  font-family: 'monospace';
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.btn-reset, .btn-count {
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-weight: bold;
+}
+
+.btn-reset {
+  background: #ff7043;
+  color: white;
+}
+
+.btn-count {
+  background: #d4af37;
+  color: #2c1810;
+}
+
+.btn-reset:hover, .btn-count:hover {
+  transform: scale(1.05);
+}
+
+.big-button {
+  width: 130px;
+  height: 130px;
+  background: radial-gradient(circle at 30% 30%, #ffffff, #d0d0d0);
+  border-radius: 50%;
+  box-shadow: 
+    0 6px 15px rgba(0,0,0,0.4),
+    inset 0 -8px 20px rgba(0,0,0,0.2);
+  cursor: pointer;
+  transition: transform 0.15s;
+  position: relative;
+}
+
+.big-button::after {
+  content: "صلِّ";
+  position: absolute;
+  font-size: 1.3rem;
+  color: #333;
+  font-weight: bold;
+}
+
+.big-button:active {
+  transform: scale(0.94);
+}
+
+/* مربع المفاجأة */
+.surprise-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.88);
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(3px);
+}
+
+.modal-content {
+  background: linear-gradient(145deg, #2c1810, #4e342e);
+  padding: 40px;
+  border-radius: 20px;
+  border: 3px solid #d4af37;
+  text-align: center;
+  max-width: 480px;
+  box-shadow: 0 15px 50px rgba(0,0,0,0.8), inset 0 0 20px rgba(212, 175, 55, 0.2);
+  position: relative;
+  animation: modalPop 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes modalPop {
+  0% { transform: scale(0.7); opacity: 0; }
+  80% { transform: scale(1.05); }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.modal-content h2 {
+  font-size: 2.4rem;
+  color: #f3e5ab;
+  margin-bottom: 15px;
+}
+
+.modal-content p {
+  font-size: 1.3rem;
+  color: #fff;
+  margin-bottom: 25px;
+  line-height: 1.5;
+}
+
+.contact-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.whatsapp-icon {
+  width: 44px;
+  height: 44px;
+  filter: drop-shadow(0 0 4px #25D366);
+}
+
+.contact-btn {
+  background: linear-gradient(to right, #25D366, #128C7E);
+  color: white;
+  border: none;
+  padding: 14px 28px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  transition: all 0.25s;
+}
+
+.contact-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+
+.continue-btn {
+  background: linear-gradient(to right, #4CAF50, #2E7D32);
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 50px;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: all 0.2s;
+}
+
+.continue-btn:hover {
+  background: linear-gradient(to right, #66BB6A, #388E3C);
+  transform: scale(1.03);
+}
+
+/* الطراطير (Confetti) — حاويات */
+#confetti-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 2000;
+}
+
+@media (max-width: 600px) {
+  .main-title { font-size: 2rem; }
+  .subtitle { font-size: 1.1rem; }
+  .counter-device { width: 250px; height: 350px; }
+  .display { font-size: 2.6rem; }
+  .big-button { width: 110px; height: 110px; }
+}
